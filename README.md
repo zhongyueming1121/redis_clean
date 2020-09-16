@@ -9,3 +9,7 @@ Find and clean up keys that have not been accessed for a long time in Redis
 使用object idletime 获取key空转时间。
 
 支持从文件中读取，通过管道删除文件中包含的key。
+
+说明：
+
+必须配置maxmemory 和 maxmemory-policy，否则整数value中使用共享整数对象[0-10000]时，会使idletime互相关联，导致查找不准确。
