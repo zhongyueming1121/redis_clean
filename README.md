@@ -1,5 +1,6 @@
 # redis_clean
 Find and clean up keys that have not been accessed for a long time in Redis
+
 查找并清理Redis中长时间没有访问的键
 
 使用scan命令步进遍历所有的key，找出上次Redis重启以来，大于N秒没有访问的key，写入文件中。
